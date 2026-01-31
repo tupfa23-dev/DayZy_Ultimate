@@ -1,0 +1,81 @@
+:root {
+  --bg: #0f1724;
+  --card: #1c1220;
+  --text: #e6eef8;
+  --muted: #9fb0c9;
+  --accent: #cf97f5;
+  --glass: rgba(255,255,255,0.04);
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1b0b3f;
+  --muted: #6b5bb7;
+  --accent: #9b59ff;
+  --glass: rgba(0,0,0,0.03);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, "Segoe UI", Roboto, Arial;
+  transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
+}
+
+/* -------------------- Layout เดิม -------------------- */
+html, body, #root { height: 100%; margin: 0; background: var(--bg); color: var(--text); }
+
+/* Header & Main */
+.app header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.25), transparent);
+  backdrop-filter: blur(6px);
+}
+.brand { font-weight:700; font-size:18px; }
+.header-controls { display:flex; gap:8px; align-items:center; }
+.header-controls button { background:transparent; border:1px solid rgba(255,255,255,0.06); padding:8px; border-radius:8px; color:var(--text); cursor:pointer; }
+
+main { display:flex; gap:16px; padding:16px; max-width:1200px; margin:12px auto; }
+.left-col { width:340px; display:flex; flex-direction:column; gap:12px; }
+.calendar-col { flex:1; background:var(--card); padding:12px; border-radius:12px; box-shadow:0 8px 30px rgba(2,6,23,0.6); }
+
+/* Cards & Panels */
+.card, .panel, .login-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  padding:12px;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(2,6,23,0.6);
+}
+.center-screen { height:100vh; display:flex; justify-content:center; align-items:center; }
+.login-card { width:360px; }
+
+/* Inputs */
+input {
+  padding:8px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  width:100%;
+  margin:6px 0;
+  background:transparent;
+  color:var(--text);
+}
+
+/* Buttons */
+button { padding:8px 12px; border-radius:8px; background:var(--accent); border:none; color:#fff; cursor:pointer; }
+button.ghost { background:transparent; border:1px solid rgba(255,255,255,0.06); }
+.muted { color:var(--muted); font-size:13px; }
+.small { font-size:12px; }
+
+/* Panel Rows */
+.add-row, .create-row, .share-row, .panel-actions { display:flex; gap:8px; margin-bottom:8px; }
+.task-list, .project-list { list-style:none; padding:0; margin:8px 0; }
+.task-list li, .project-card { display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px dashed rgba(255,255,255,0.02); }
+.task-list li.done { opacity:0.6; text-decoration:line-through; }
+.del { background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--text); padding:6px; border-radius:8px; }
+
+/* -------------------- Hover Animation -------------------- */
+.card:hover, .panel:hover, .login-card:hover { transform: translateY(-4px); transition: all 0.3s; }
+button:hover { transform: translateY(-2px); box-shadow:0 5px 15px var(--glass); transition: all 0.3s; }

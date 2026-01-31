@@ -1,0 +1,173 @@
+/* ================= Light Mode (Default) ================= */
+:root {
+  --bg-color: #fefefe;
+  --text-color: #111;
+  --panel-bg: #fff;
+  --panel-shadow: rgba(0,0,0,0.05);
+  --input-bg: #fff;
+  --input-text: #111;
+  --btn-text: #fff;
+  --btn-bg: #7b5fff;
+  --btn-hover: #6a4de0;
+  --muted-text: #555;
+}
+
+/* ================= Dark Mode ================= */
+.dark-mode {
+  --bg-color: #1f1b2c;
+  --text-color: #eee;
+  --panel-bg: #2c2541;
+  --panel-shadow: rgba(0,0,0,0.5);
+  --input-bg: #3a3255;
+  --input-text: #eee;
+  --btn-text: #fff;
+  --btn-bg: #7b5fff;
+  --btn-hover: #9b6fff;
+  --muted-text: #bbb;
+}
+
+/* ================= General ================= */
+body, html, .app {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  box-shadow: 0 2px 5px var(--panel-shadow);
+  border-radius: 0 0 10px 10px;
+}
+
+header .brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+header button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: all 0.2s;
+}
+
+header button:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Panels */
+.panel {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px var(--panel-shadow);
+  transition: all 0.3s;
+}
+
+/* Inputs */
+input, textarea {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--muted-text);
+  border-radius: 6px;
+  padding: 6px 8px;
+  width: 100%;
+}
+
+::placeholder {
+  color: var(--muted-text);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Muted text */
+.muted {
+  color: var(--muted-text);
+}
+
+/* Calendar */
+.fc {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px var(--panel-shadow);
+}
+
+.fc .fc-day-other {
+  color: var(--muted-text) !important;
+}
+
+.fc .fc-event {
+  background-color: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 2px 4px;
+  font-size: 0.85em;
+}
+
+.fc .fc-daygrid-day-number {
+  font-weight: bold;
+}
+
+/* Settings */
+.settings-card {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px var(--panel-shadow);
+}
+
+/* TodoPanel / TeamPanel */
+.todo-card, .project-card {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.input-dark {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--muted-text);
+  border-radius: 6px;
+  padding: 6px 8px;
+  width: calc(100% - 10px);
+  margin-right: 5px;
+}
+
+.btn-purple { background-color: var(--btn-bg); color: var(--btn-text); }
+.btn-purple:hover { opacity: 0.9; }
+.btn-red { background-color: #ff5b5b; color: #fff; }
+.btn-red:hover { opacity: 0.9; }
+.btn-small { padding: 3px 6px; font-size: 0.8em; }
+
+.checklist li.done { text-decoration: line-through; opacity: 0.6; cursor: pointer; }
+.checklist li:hover { background-color: rgba(0,0,0,0.1); }

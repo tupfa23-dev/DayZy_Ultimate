@@ -1,0 +1,141 @@
+/* src/pages/notifications.css */
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.notification-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  transition: all 0.2s;
+}
+
+.dark-mode .notification-item {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.notification-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.notification-item.unread {
+  background: linear-gradient(135deg, #f0f4ff 0%, #f8f4ff 100%);
+  border-left: 4px solid #667eea;
+}
+
+.dark-mode .notification-item.unread {
+  background: linear-gradient(135deg, #2a2540 0%, #3a2a4a 100%);
+  border-left-color: #667eea;
+}
+
+.notif-icon {
+  font-size: 28px;
+  min-width: 30px;
+  flex-shrink: 0;
+}
+
+.notif-content {
+  flex: 1;
+}
+
+.notif-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.notif-message {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.notif-time {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.notif-delete {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px 8px;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.notif-delete:hover {
+  color: #f00;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.empty-state p {
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+  color: #999;
+}
+
+.clear-all-btn {
+  background: rgba(255, 77, 77, 0.2);
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  color: #ff4d4d;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.clear-all-btn:hover {
+  background: rgba(255, 77, 77, 0.3);
+}
+
+@media (max-width: 600px) {
+  .notifications-list {
+    gap: 8px;
+  }
+
+  .notification-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .notif-icon {
+    font-size: 24px;
+  }
+
+  .notif-message {
+    font-size: 13px;
+  }
+}

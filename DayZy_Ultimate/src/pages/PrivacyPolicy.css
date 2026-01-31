@@ -1,0 +1,139 @@
+.privacy-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.privacy-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.privacy-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.privacy-header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.privacy-content {
+  background: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.lang-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: flex-end;
+}
+
+.lang-toggle button {
+  padding: 10px 20px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.lang-toggle button:hover {
+  background: #f0f0f0;
+}
+
+.lang-toggle button.active {
+  background: #667eea;
+  color: white;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1em;
+}
+
+.back-button:hover {
+  background: #764ba2;
+  transform: translateX(-5px);
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  color: #667eea;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  line-height: 1.6;
+  color: #333;
+}
+
+.section ul {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.section ul li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.privacy-footer {
+  background: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .privacy-header h1 {
+    font-size: 1.8em;
+  }
+
+  .privacy-content {
+    padding: 20px;
+  }
+
+  .lang-toggle {
+    justify-content: center;
+  }
+
+  .section h2 {
+    font-size: 1.2em;
+  }
+}

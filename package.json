@@ -1,0 +1,24 @@
+{
+  "name": "dayzy-ultimate",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "server": "node src/server.js",
+    "dev": "concurrently \"npm run server\" \"vite\"",
+    "start": "npm run dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fullcalendar/daygrid": "^6.1.19",
+    "@fullcalendar/react": "^6.1.19",
+    "firebase": "^12.6.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.10.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "vite": "^5.0.0",
+    "concurrently": "^9.0.0"
+  }
+}

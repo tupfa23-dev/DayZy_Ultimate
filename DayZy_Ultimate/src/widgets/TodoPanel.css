@@ -1,0 +1,419 @@
+.checkbox-btn {
+  background: none !important;
+  border: none !important;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #000 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.checkbox-btn:hover {
+  transform: scale(1.2);
+  color: #333 !important;
+}
+
+/* ปุ่มติ๊กเมื่องานเสร็จ */
+.checklist-item.done .checkbox-btn {
+  color: #00cc44 !important;
+  font-weight: bold;
+}
+
+.dark-mode .checkbox-btn {
+  color: #fff !important;
+}
+
+.dark-mode .checkbox-btn:hover {
+  color: #e5e7eb !important;
+}
+
+.dark-mode .checklist-item.done .checkbox-btn {
+  color: #00cc44 !important;
+}/* =============== ANIMATIONS =============== */
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============== TODO PANEL =============== */
+
+.todo-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .todo-panel {
+  background: #1a1a2e;
+  color: white;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark-mode .panel-header {
+  border-bottom-color: #374151;
+}
+
+.panel-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.task-count {
+  background: #3b82f6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* =============== ADD TASK SECTION =============== */
+
+.add-task-section {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark-mode .add-task-section {
+  border-bottom-color: #374151;
+}
+
+.task-input-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.input-field {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .input-field {
+  background: #16213e;
+  border-color: #475569;
+  color: white;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* =============== BUTTONS =============== */
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.btn-edit {
+  background: #ff9500;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #ff8800;
+}
+
+.btn-delete {
+  background: #ff3333;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #dd0000;
+}
+
+.btn-complete {
+  background: #00cc44;
+  color: white;
+}
+
+.btn-complete:hover {
+  background: #00bb33;
+}
+
+.btn-incomplete {
+  background: #ff9500;
+  color: white;
+}
+
+.btn-incomplete:hover {
+  background: #ff8800;
+}
+
+.btn-add-item {
+  background: #10b981;
+  color: white;
+  padding: 0.4rem 0.6rem;
+}
+
+.btn-add-item:hover {
+  background: #059669;
+}
+
+/* =============== TASK ACTIONS (BUTTONS SPACING) =============== */
+
+.task-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.dark-mode .task-actions {
+  border-top-color: #374151;
+}
+
+/* =============== TODOS LIST =============== */
+
+.todo-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.todo-list.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.dark-mode .todo-list.scrollable {
+  scrollbar-color: #475569 #1a1a2e;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.dark-mode .empty-state {
+  color: #6b7280;
+}
+
+.empty-state p {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-state span {
+  font-size: 0.9rem;
+}
+
+/* =============== TODO CARD =============== */
+
+.todo-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease-out;
+}
+
+.dark-mode .todo-card {
+  background: #16213e;
+  border-color: #374151;
+}
+
+.todo-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.dark-mode .todo-card:hover {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* COMPLETED STATE - MUTED APPEARANCE (NO FADE OUT) */
+.todo-card.completed {
+  opacity: 0.6;
+  background: #f3f4f6;
+}
+
+.dark-mode .todo-card.completed {
+  background: #0f1419;
+  opacity: 0.5;
+}
+
+.todo-card.completed .task-title {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* =============== TASK HEADER =============== */
+
+.task-header {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.task-complete-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  color: #000 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.task-complete-btn:hover {
+  transform: scale(1.2);
+}
+
+/* เมื่องานเสร็จ */
+.todo-card.completed .task-complete-btn {
+  color: #00cc44 !important;
+  font-weight: bold;
+}
+
+.dark-mode .task-complete-btn {
+  color: #fff !important;
+}
+
+.dark-mode .todo-card.completed .task-complete-btn {
+  color: #00cc44 !important;
+}
+
+.task-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  word-break: break-word;
+  color: #1f2937;
+}
+
+.dark-mode .task-title {
+  color: #e5e7eb;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  min-width: 60px;
+}
+
+.dark-mode .progress-bar {
+  background: #374151;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 600;
+  min-width: 35px;
+  text-align: right;
+}
+
+.dark-mode .progress-text {
+  color: #9ca3af;
+}
+
+/* =============== TASK META =============== */
+
+.task-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}

@@ -1,0 +1,158 @@
+/* ================= Light Mode (Default) ================= */
+:root {
+  --bg-color: #fff;           /* พื้นหลังหลัก */
+  --text-color: #000;         /* ตัวหนังสือหลัก */
+  --panel-bg: #f3f3f3;        /* Card / Panel background */
+  --input-bg: #fff;           /* Input background */
+  --input-text: #000;         /* Input text */
+  --btn-text: #fff;           /* Button text */
+  --btn-bg: #7b5fff;          /* Button background */
+  --btn-hover: #6a4de0;       /* Button hover */
+  --muted-text: #555;         /* Text-muted */
+}
+
+/* ================= Dark Mode ================= */
+.dark-mode {
+  --bg-color: #1e1b2c;
+  --text-color: #fff;
+  --panel-bg: #2c2541;
+  --input-bg: #3a3255;
+  --input-text: #fff;
+  --btn-text: #fff;
+  --btn-bg: #7b5fff;
+  --btn-hover: #9b6fff;
+  --muted-text: #bbb;
+}
+
+/* ================= Apply Variables ================= */
+body, html, .app {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+}
+
+header .brand {
+  color: var(--text-color);
+}
+
+header button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Panels */
+.panel {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+input, textarea {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+::placeholder {
+  color: var(--muted-text);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Muted text */
+.muted {
+  color: var(--muted-text);
+}
+
+/* Checklist / Todo */
+.checklist li {
+  color: var(--text-color);
+}
+
+.checklist li.done {
+  text-decoration: line-through;
+  color: var(--muted-text);
+}
+
+/* Project / Members */
+.members-count,
+.invites {
+  color: var(--muted-text);
+  font-size: 0.85em;
+}
+
+/* Calendar Background */
+.fc {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Header วัน Mon, Tue ... */
+.fc .fc-col-header {
+  color: var(--text-color) !important;
+}
+
+/* ตัวเลขวันในกริด */
+.fc .fc-daygrid-day-number {
+  color: var(--text-color) !important;
+}
+
+/* Event */
+.fc .fc-event {
+  background-color: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
+  border: none !important;
+  border-radius: 6px !important;
+}
+
+/* วันของเดือนอื่น (ไม่ใช่เดือนปัจจุบัน) */
+.fc .fc-day-other {
+  color: var(--muted-text) !important;
+}
+
+
+
+/* Settings */
+.settings-card {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.settings-card input,
+.settings-card label {
+  color: var(--input-text);
+}
