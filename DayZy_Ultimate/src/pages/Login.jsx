@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore"; // ← เพิ่ม import นี้
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import "./login.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");

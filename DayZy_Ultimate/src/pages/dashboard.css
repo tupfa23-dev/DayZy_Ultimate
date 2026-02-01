@@ -814,9 +814,13 @@ button {
   gap: 18px;
   padding: 18px;
   align-items: flex-start;
-  height: calc(100vh - 68px);
+  
+  min-height: calc(100vh - 68px); 
+  height: auto; 
+
   box-sizing: border-box;
-  overflow: hidden;
+
+  overflow: visible; 
 }
 
 .left-panels {
